@@ -1,0 +1,133 @@
+    
+  .video-bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    object-fit: cover;
+    opacity: 1;
+    z-index: -1;
+    
+  }
+   
+
+  .section{
+    position: relative;
+    z-index : 1;
+    width: 100%;
+    height: 100vh;
+  }
+
+
+  .title{
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    position: fixed;
+    top: 0; left:0;
+    margin-left: 25%;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    opacity: 0;
+    color: #ffd700;
+    z-index: 9999;
+
+  }
+
+  .section.in-page .title{
+    transform: scale(1.2);
+    opacity:1;
+  }
+
+  .panel {
+    height: auto;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Background bianco semi-trasparente */
+    position: relative;
+    z-index: 2;
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container-content {
+    opacity: 0.8; /* Opacità applicata solo al testo */
+}
+
+.panel img {
+    opacity: 1 !important; 
+    z-index: 3;
+    position: relative;
+    display: block;
+    
+}
+
+
+  .panel--white{background: #fff;}
+
+  .container{width: 100%;max-width: 1000px;padding: 5% 10% 0 10%;}
+
+  .intro{font-size: 20px;font-weight: bold;}
+  .title-big{font-size: 5rem;}
+
+  .fade-in{opacity: 0;transform: translateY(10vh); transition: all 1s cubic-bezier(.215, .61, .355, 1);}
+  .fade-in.in-page{opacity: 1;transform: translateY(0vh);}
+
+  .img-cover{width:100% ;object-fit: cover;object-position: center;}
+  .img-big-left{width:100% ;position: relative; left: 0%; display: block;}
+  .img-big-center{width: 25vw;position: relative; left: 0vw; display: block;}
+  .img-big-right{width: 50vw;position: relative; right: -10vw; display: block;}
+
+
+  .title-med{font-size: 3.5rem;}
+  .subtitle{font-size: 1.5rem;color:#666; max-width: 500px;padding-bottom: 10%;}
+  .orange-text{font-size: 2rem;color:#f56900; text-align: center;font-weight: bold;}
+
+
+  /* SCREEN */
+
+  @media (max-width: 1420px) {
+      
+    .title-med{font-size: 1.5rem;}
+    .title-big{font-size: 2.3rem;}
+    .subtitle{font-size: 1rem;}
+
+    
+
+  }
+
+  @media (min-width:1350px ) {
+    .img-big-left{width:100% ;position: relative; left: +10%; display: block;}
+  }
+
+  @media (min-width:1600px ) {
+  .img-big-left{width:100% ;position: relative; left: +20%; display: block;}
+  }
+
+  @media (min-width:2000px ) {
+    .img-big-left{width:100% ;position: relative; left: +40%; display: block;}
+    }
+
+
+@media(min-width: 2100px){
+
+  /* INSERIRE FOTO IN VERTICALE PER SCHERMI LARGHI MENO DI 1000PX */
+  /*  .panel{
+      background: red;
+    }
+ */
+
+ /* Mette le foto e scritte a sinistra in modo che non escanmo dallo schernmo */
+ .panel{
+  display: flex;
+  justify-content: left;
+
+ }
+}
+  
